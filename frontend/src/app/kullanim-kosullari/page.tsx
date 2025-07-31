@@ -60,7 +60,7 @@ export default function KullanimKosullariPage() {
                   Bu koşullar, web sitenizin kullanımıyla ilgili tüm hakları ve yükümlülükleri düzenler.
                 </p>
                 <p>
-                  Bu koşullar, Ocak 1, 2025'ten geçerli olup, gerektiğinde güncellenmektedir.
+                  Bu koşullar, Ocak 1, 2025&apos;ten geçerli olup, gerektiğinde güncellenmektedir.
                 </p>
               </div>
 
@@ -156,7 +156,7 @@ export default function KullanimKosullariPage() {
                   <li>Düzenli güvenlik güncellemeleri</li>
                 </ul>
                 <p className="mt-4">
-                  Daha detaylı bilgi için <Link href="/gizlilik" className="text-amber-300 hover:text-amber-400 underline">Gizlilik Politikası</Link>nızı inceleyin.
+                  Daha detaylı bilgi için <Link href="/gizlilik" className="text-amber-300 hover:text-amber-400 underline">Gizlilik Politikası</Link>&apos;nızı inceleyin.
                 </p>
               </div>
 

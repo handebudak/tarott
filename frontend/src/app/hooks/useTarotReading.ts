@@ -20,7 +20,7 @@ export const useTarotReading = ({ enableReversed, type }: UseTarotReadingProps) 
   const [isLoading, setIsLoading] = useState(false);
   const [reading, setReading] = useState<string | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
-  const [originalCards, setOriginalCards] = useState<any[]>([]);
+  const [originalCards, setOriginalCards] = useState<Card[]>([]);
   const [loadingCards, setLoadingCards] = useState(true);
   const [cardOrientations, setCardOrientations] = useState<boolean[]>([]);
   const [enableReversedState, setEnableReversedState] = useState(enableReversed);
@@ -179,8 +179,8 @@ export const useTarotReading = ({ enableReversed, type }: UseTarotReadingProps) 
     try {
       // Seçilen kartların gerçek indekslerini bul
       const originalSelectedCards = selectedCards.map(selectedIndex => {
-        const selectedCardData = cards[selectedIndex] as any;
-        const originalIndex = originalCards.findIndex((card: any) => 
+        const selectedCardData = cards[selectedIndex];
+        const originalIndex = originalCards.findIndex((card: Card) => 
           card.name === selectedCardData.name && 
           card.turkish_name === selectedCardData.turkish_name
         );

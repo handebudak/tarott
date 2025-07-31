@@ -1,7 +1,13 @@
 import Image from "next/image";
 
+interface Card {
+  id: number;
+  name: string;
+  image: string;
+}
+
 interface CardGridProps {
-  cards: any[];
+  cards: Card[];
   selectedCards: number[];
   onCardSelect: (cardIndex: number) => void;
   loadingCards: boolean;
@@ -10,7 +16,6 @@ interface CardGridProps {
 }
 
 export default function CardGrid({ 
-  cards, 
   selectedCards, 
   onCardSelect, 
   loadingCards, 
@@ -18,9 +23,7 @@ export default function CardGrid({
   maxSelection = 1
 }: CardGridProps) {
   const isCardSelected = (cardIndex: number) => {
-    return maxSelection === 1 
-      ? selectedCards.includes(cardIndex)
-      : selectedCards.includes(cardIndex);
+    return selectedCards.includes(cardIndex);
   };
 
   const canSelectCard = (cardIndex: number) => {

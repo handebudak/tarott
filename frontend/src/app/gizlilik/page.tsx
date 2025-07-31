@@ -56,7 +56,7 @@ export default function GizlilikPage() {
               <div>
                 <h2 className="text-amber-400 font-bold text-xl mb-4">1. Genel Bilgi</h2>
                 <p className="mb-4">
-                  Biz ("biz", "bizim", "bizim site") gizliliğinizi koruma konusunda söz veriyoruz. 
+                  Biz (&quot;biz&quot;, &quot;bizim&quot;, &quot;bizim site&quot;) gizliliğinizi koruma konusunda söz veriyoruz. 
                   Bu gizlilik politikası, web sitenizde toplanan bilginin nasıl kullanıldığını açıklar.
                 </p>
                 <p>
@@ -151,10 +151,10 @@ export default function GizlilikPage() {
                   GDPR'ye göre, aşağıdaki haklarınız var:
                 </p>
                 <ul className="list-disc list-inside ml-4 space-y-2">
-                  <li>Kişisel verinizin işlenip işlenmediğini biliyor musunuz?</li>
+                  <li>Kişisel verinizin işlenip işlenmediğini biliyor musunuz</li>
                   <li>Kişisel veriniz hakkında bilgi isteyebilirsiniz</li>
-                  <li>İşleme amacını ve bu amaçla işlenip işlenmediğini biliyor musunuz?</li>
-                  <li>Kişisel verinizin hangi üçüncü tarafa aktarıldığını biliyor musunuz?</li>
+                  <li>İşleme amacını ve bu amaçla işlenip işlenmediğini biliyor musunuz</li>
+                  <li>Kişisel verinizin hangi üçüncü tarafa aktarıldığını biliyor musunuz</li>
                   <li>Kişisel verinizin eksik veya yanlış olduğunu düzeltebilirsiniz</li>
                   <li>Kişisel verinizi silmek veya silmek isteyebilirsiniz</li>
                 </ul>

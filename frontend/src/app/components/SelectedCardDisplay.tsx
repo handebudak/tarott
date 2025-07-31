@@ -97,11 +97,11 @@ export default function SelectedCardDisplay({
                   )}
                   
                   {/* Detailed Meaning */}
-                  {(cards[cardIndex] as any).detailed_meaning && (
+                  {cards[cardIndex]?.detailed_meaning && (
                     <div>
-                                             <h4 className="text-amber-400 font-semibold text-xs mb-1">📖 Detaylı Anlam</h4>
+                      <h4 className="text-amber-400 font-semibold text-xs mb-1">📖 Detaylı Anlam</h4>
                       <p className="text-gray-200 text-xs leading-relaxed">
-                        {(cards[cardIndex] as any).detailed_meaning}
+                        {cards[cardIndex].detailed_meaning}
                       </p>
                     </div>
                   )}
@@ -176,14 +176,14 @@ export default function SelectedCardDisplay({
               )}
               
               {/* Detailed Meaning */}
-              {(cards[cardIndex] as any).detailed_meaning ? (
-                                 <div>
-                   <h5 className="text-amber-400 font-semibold text-sm mb-1">📖 Detaylı Anlam</h5>
-                   <p className="text-gray-200 text-sm leading-relaxed">
-                     {(cards[cardIndex] as any).detailed_meaning}
-                   </p>
-                 </div>
-               ) : (
+              {cards[cardIndex]?.detailed_meaning ? (
+                <div>
+                  <h5 className="text-amber-400 font-semibold text-sm mb-1">📖 Detaylı Anlam</h5>
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    {cards[cardIndex].detailed_meaning}
+                  </p>
+                </div>
+              ) : (
                  <div>
                    <h5 className="text-amber-400 font-semibold text-sm mb-1">📖 Detaylı Anlam</h5>
                    <p className="text-gray-200 text-sm leading-relaxed">

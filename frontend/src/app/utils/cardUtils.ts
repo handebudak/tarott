@@ -6,7 +6,7 @@ interface Card {
 }
 
 // Diziyi karıştıran fonksiyon
-export const shuffleArray = (array: any[]) => {
+export const shuffleArray = <T>(array: T[]): T[] => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -18,7 +18,7 @@ export const shuffleArray = (array: any[]) => {
 // API'den gelen kart bilgisini public klasöründeki dosya yoluna çevir
 export const mapApiImageToPublicPath = (card: Card) => {
   // API'den gelen image alanını kontrol et (imagePath değil, image!)
-  const imagePath = (card as any).image || card.imagePath;
+  const imagePath = (card as Card & { image?: string }).image || card.imagePath;
   
   if (!imagePath) return "/card-bg.png";
   
@@ -71,7 +71,7 @@ export const getCardNameWithTranslation = (cardIndex: number, cards: Card[]) => 
   
   const englishName = card.name;
   // API'den gelen turkish_name alanını kullan, yoksa manuel çeviri yap
-  const turkishName = (card as any).turkish_name || getTurkishCardName(englishName);
+  const turkishName = (card as Card & { turkish_name?: string }).turkish_name || getTurkishCardName(englishName);
   
   return `${englishName} (${turkishName})`;
 };
@@ -181,7 +181,7 @@ export const getSelectedCardMeaning = (cardIndex: number, cards: Card[], cardOri
   const isReversed = cardOrientations[cardIndex] || false;
   
   return {
-    meaning: isReversed ? (card as any).meaning_reversed : (card as any).meaning_upright,
+    meaning: isReversed ? (card as Card & { meaning_reversed?: string }).meaning_reversed : (card as Card & { meaning_upright?: string }).meaning_upright,
     isReversed: isReversed
   };
 }; 

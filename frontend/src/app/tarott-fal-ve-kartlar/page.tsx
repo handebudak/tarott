@@ -29,7 +29,7 @@ export default function TarotNedir() {
               </p>
               
               <p className="text-sm sm:text-base">
-                Tarot falı, bir tür "kehanet" ya da "geleceği tahmin" aracı olmanın ötesinde; aslında kişinin iç dünyasına, duygularına ve yaşamındaki enerjilere ışık tutar. Kartlar, doğru şekilde yorumlandığında, bize farkında olmadığımız yolları ve potansiyelleri gösterebilir.
+                Tarot falı, bir tür &quot;kehanet&quot; ya da &quot;geleceği tahmin&quot; aracı olmanın ötesinde; aslında kişinin iç dünyasına, duygularına ve yaşamındaki enerjilere ışık tutar. Kartlar, doğru şekilde yorumlandığında, bize farkında olmadığımız yolları ve potansiyelleri gösterebilir.
               </p>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function TarotNedir() {
             
             <div className="text-gray-200 leading-relaxed space-y-3">
               <p className="text-sm sm:text-base">
-                Tarot kartları ilk kez 15. yüzyılda İtalya'da oyun kartı olarak ortaya çıktı. Ancak zamanla mistikler, okültistler ve ruhani öğretilerle ilgilenenler tarafından bir kehanet aracına dönüştürüldü.
+                Tarot kartları ilk kez 15. yüzyılda İtalya&apos;da oyun kartı olarak ortaya çıktı. Ancak zamanla mistikler, okültistler ve ruhani öğretilerle ilgilenenler tarafından bir kehanet aracına dönüştürüldü.
               </p>
               
               <p className="text-sm sm:text-base">
