@@ -189,7 +189,7 @@ export const useTarotReading = ({ enableReversed, type }: UseTarotReadingProps) 
 
       console.log('Seçilen kartların orijinal indeksleri:', originalSelectedCards);
 
-      const response = await fetch('https://tarott-backend.onrender.com/api/tarot', {
+      const response = await fetch('https://tarott-backend.onrender.com/api/tarot/reading', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
