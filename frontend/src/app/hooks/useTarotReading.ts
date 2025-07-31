@@ -40,7 +40,7 @@ export const useTarotReading = ({ enableReversed, type }: UseTarotReadingProps) 
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch('/api/cards');
+        const response = await fetch('https://tarott-backend.onrender.com/api/cards');
         if (response.ok) {
           const data = await response.json();
           // Orijinal kartları sakla
@@ -189,7 +189,7 @@ export const useTarotReading = ({ enableReversed, type }: UseTarotReadingProps) 
 
       console.log('Seçilen kartların orijinal indeksleri:', originalSelectedCards);
 
-      const response = await fetch('/api/tarot', {
+      const response = await fetch('https://tarott-backend.onrender.com/api/tarot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
