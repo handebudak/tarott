@@ -12,6 +12,7 @@
     "start-frontend": "npm run dev"
   },
   "dependencies": {
+    "critters": "^0.0.23",
     "next": "15.4.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"
