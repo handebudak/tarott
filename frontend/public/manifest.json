@@ -1,0 +1,27 @@
+{
+  "name": "Tarott - Yapay Zeka Destekli Tarot Falı",
+  "short_name": "Tarott",
+  "description": "Yapay zeka destekli tarot falınızı baktırın. Ücretsiz online tarot deneyimi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["lifestyle", "entertainment", "spirituality"],
+  "lang": "tr",
+  "dir": "ltr"
+} 

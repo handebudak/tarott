@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tarott.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Allow important pages
+Allow: /
+Allow: /tarot-kartlari
+Allow: /tek-kart
+Allow: /uc-kart
+Allow: /hakkimizda
+Allow: /kullanim-kosullari
+Allow: /gizlilik 
