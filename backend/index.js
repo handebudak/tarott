@@ -5,15 +5,15 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// CORS ayarları
+// CORS settings
 app.use(cors());
 app.use(express.json());
 
-// Route'ları yükle
+// Load routes
 const cardsRoutes = require('./routes/cards');
 const tarotRoutes = require('./routes/tarot');
 
-// Route'ları kullan
+// Use routes
 app.use('/api', cardsRoutes);
 app.use('/api/tarot', tarotRoutes);
 

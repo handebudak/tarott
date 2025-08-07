@@ -11,7 +11,7 @@ export default function ReadingResult({ reading, onReset }: ReadingResultProps) 
       <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">🔮 Tarot Falınız</h3>
       <div className="text-gray-200 leading-relaxed space-y-3 sm:space-y-4">
         {reading.split('\n').map((paragraph, index) => {
-          // Başlık kontrolü
+          // Title check
           if (paragraph.trim().startsWith('**') && paragraph.trim().endsWith('**')) {
             return (
               <h4 key={index} className="text-amber-400 font-semibold text-base sm:text-lg mt-4 sm:mt-6 mb-2 sm:mb-3">
@@ -19,11 +19,11 @@ export default function ReadingResult({ reading, onReset }: ReadingResultProps) 
               </h4>
             );
           }
-          // Boş satırları atla
+          // Skip empty lines
           if (paragraph.trim() === '') {
             return null;
           }
-          // Normal paragraf
+          // Normal paragraph
           return (
             <p key={index} className="text-gray-200 leading-relaxed text-sm sm:text-base">
               {paragraph}

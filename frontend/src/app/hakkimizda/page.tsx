@@ -23,7 +23,7 @@ export default function HakkimizdaPage() {
       </div>
 
       {/* Header */}
-      <Header showBackButton={true} />
+      <Header />
 
       {/* Main Content */}
       <main className="flex-1 relative container mx-auto px-4 py-8 sm:py-12">

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const tarotService = require('../services/tarotService');
 
-// Tek kart falı endpoint'i
+// Single card reading endpoint
 router.post('/single-card', async (req, res) => {
   try {
     const { name, question, selectedCards, cardOrientations } = req.body;
@@ -15,30 +15,30 @@ router.post('/single-card', async (req, res) => {
     res.json(result);
     
   } catch (error) {
-    console.error('Tek kart falı hatası:', error);
-    res.status(500).json({ error: 'Fal oluşturulurken bir hata oluştu' });
+    console.error('Single card reading error:', error);
+    res.status(500).json({ error: 'Single card reading error' });
   }
 });
 
-// Üç kart falı endpoint'i
+// Three card reading endpoint
 router.post('/three-cards', async (req, res) => {
   try {
     const { name, question, selectedCards, cardOrientations } = req.body;
     
     if (!selectedCards || selectedCards.length !== 3) {
-      return res.status(400).json({ error: 'Üç kart seçilmedi' });
+      return res.status(400).json({ error: 'Three cards not selected' });
     }
     
     const result = await tarotService.createThreeCardReading(selectedCards, cardOrientations, question, name);
     res.json(result);
     
   } catch (error) {
-    console.error('Üç kart falı hatası:', error);
-    res.status(500).json({ error: 'Fal oluşturulurken bir hata oluştu' });
+    console.error('Three card reading error:', error);
+    res.status(500).json({ error: 'Three card reading error' });
   }
 });
 
-// Genel fal endpoint'i
+// General reading endpoint
 router.post('/reading', async (req, res) => {
   try {
     const { name, question, selectedCards, cardOrientations } = req.body;
@@ -48,11 +48,11 @@ router.post('/reading', async (req, res) => {
     }
     
     if (selectedCards.length === 1) {
-      // Tek kart falı
+      // Single card reading
       const result = await tarotService.createSingleCardReading(selectedCards, cardOrientations, question, name);
       res.json(result);
     } else if (selectedCards.length === 3) {
-      // Üç kart falı
+      // Three card reading
       const result = await tarotService.createThreeCardReading(selectedCards, cardOrientations, question, name);
       res.json(result);
     } else {
@@ -60,8 +60,8 @@ router.post('/reading', async (req, res) => {
     }
     
   } catch (error) {
-    console.error('Fal hatası:', error);
-    res.status(500).json({ error: 'Fal oluşturulurken bir hata oluştu' });
+    console.error('Reading error:', error);
+    res.status(500).json({ error: 'Reading error' });
   }
 });
 

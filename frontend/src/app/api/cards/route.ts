@@ -20,7 +20,7 @@ export async function GET() {
   } catch (error) {
     console.error('Cards API Error:', error);
     return NextResponse.json(
-      { error: 'Kart bilgileri alınırken hata oluştu' },
+      { error: 'Cards API Error' },
       { status: 500 }
     );
   }

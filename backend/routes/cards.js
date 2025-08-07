@@ -3,10 +3,10 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 
-// Kart verilerini yükle
+// Load Cards data
 const cardsData = JSON.parse(fs.readFileSync(path.join(__dirname, '../cards.json'), 'utf8'));
 
-// Tüm kartları getir
+// Get all cards
 router.get('/cards', (req, res) => {
   try {
     res.json(cardsData);
@@ -16,7 +16,7 @@ router.get('/cards', (req, res) => {
   }
 });
 
-// Sağlık kontrolü
+// Health check
 router.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Kart API çalışıyor' });
 });

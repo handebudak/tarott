@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Express.js API'nizin URL'si
+// Express.js API URL
 const EXPRESS_API_URL = process.env.EXPRESS_API_URL || 'http://localhost:5000';
 
 export async function POST(request: NextRequest) {
@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     console.log('Frontend request body:', body);
     
-    // Request tipine göre endpoint seç
+    // Request type
     let endpoint = '/api/tarot/reading';
     if (body.type === 'single') {
       endpoint = '/api/tarot/single-card';
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     console.log('API endpoint:', fullUrl);
     console.log('EXPRESS_API_URL:', EXPRESS_API_URL);
     
-    // Express.js API'ye istek gönder
+    // Express.js API request
     const response = await fetch(fullUrl, {
       method: 'POST',
       headers: {
@@ -43,9 +43,9 @@ export async function POST(request: NextRequest) {
     
   } catch (error) {
     console.error('API Error:', error);
-    console.error('Error details:', error.message);
+    console.error('Error details:', error instanceof Error ? error.message : String(error));
     return NextResponse.json(
-      { error: 'Tarot falı baktırılırken bir hata oluştu' },
+      { error: 'Tarot API Error' },
       { status: 500 }
     );
   }
