@@ -52,7 +52,7 @@ async function generateTarotReading(card, question, name) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'llama3-70b-8192',
+        model: 'llama3-8b-8192',
         messages: [
           {
             role: 'system',
@@ -130,7 +130,7 @@ async function generateTarotReadingWithPosition(card, question, name, position) 
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'llama3-70b-8192',
+        model: 'llama3-8b-8192',
         messages: [
           {
             role: 'system',
@@ -223,7 +223,7 @@ Bu üç kart birlikte kullanıcıya ne söylüyor? Aralarındaki ilişki nedir? 
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'llama3-70b-8192',
+        model: 'llama3-8b-8192',
         messages: [
           {
             role: 'system',
