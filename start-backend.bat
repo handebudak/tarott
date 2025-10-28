@@ -1,4 +1,4 @@
 @echo off
-cd tarott-api
+cd backend
 node index.js
 pause 
